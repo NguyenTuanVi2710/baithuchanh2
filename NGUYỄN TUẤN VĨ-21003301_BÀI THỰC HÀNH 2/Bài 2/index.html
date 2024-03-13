@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đóng góp ý kiến sản phẩm</title>
+    <style>
+      html, body{
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(to right, #F29BD4 0%, #B2D9EA 100%);
+}
+        .container {
+          background: linear-gradient(to left, #F29BD4 0%, #B2D9EA 100%);
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .input-group label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        .input-group input,
+        .input-group select,
+      {width: 400px;
+            padding: 5px;}
+        .input-group textarea {
+            width: 400px;
+            padding: 20px;
+        }
+
+        .btn {
+            background-color: #F29BD4 ;
+            color: white;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+      <h1 style="color:purple">
+        ĐÓNG GÓP Ý KIẾN VỀ SẢN PHẨM
+  </h1>
+  </center>
+  <center>
+  <p>
+    Đóng góp của bạn sẽ được chúng tôi xem xét, vui lòng nhập tiếng việt có dấu<br>
+    Các ý kiến đóng góp nên viết chi tiết rõ ràng kèm theo các chi tiết xác thực thời gian địa điểm <i>(nếu có)</i>
+  </p>
+    </center>
+      <center>
+        <form action="#" method="post">
+            <div class="input-group">
+        
+                <input type="text" style="width: 400px; height: 30px; border-radius: 10px;" placeholder="Họ và tên" id="input-name" required>
+            </div>
+            <div class="input-group">
+                
+                <input type="text" style="width: 400px; height: 30px; border-radius: 10px;"  placeholder="Mã thẻ" id="input-card" required>
+            </div>
+            <div class="input-group">
+               
+                <input type="tel" style="width: 400px; height: 30px; border-radius: 10px;"  placeholder="Số điện thoại" id="input-phone" required>
+            </div>
+            <div class="input-group">
+                
+                <input type="email" style="width: 400px; height: 30px; border-radius: 10px;"  placeholder="E-mail" id="input-email" required>
+            </div>
+            <div class="input-group">
+                
+                <select style="width: 400px; height: 40px; border-radius: 10px;" id="input-customer-type" required>
+                    <option value="">Chọn loại khách hàng</option>
+                    <option value="vip">VIP</option>
+                    <option value="regular">Regular</option>
+                    <option value="new">New</option>
+                </select>
+            </div>
+            <div class="input-group">
+                
+                <input type="text" style="width: 400px; height: 30px; border-radius: 10px;"  placeholder="Mã hóa đơn" id="input-invoice">
+            </div>
+            <div class="input-group">
+               
+                <textarea style="margin-top:20px; border-radius: 10px;" placeholder="Chi tiêt mô tả" id="input-description" required></textarea>
+            </div>
+            <button class="btn" type="submit">Gửi ý kiến</button>
+        </form>
+        </center>
+    </div>
+      
+</body>
+</html>

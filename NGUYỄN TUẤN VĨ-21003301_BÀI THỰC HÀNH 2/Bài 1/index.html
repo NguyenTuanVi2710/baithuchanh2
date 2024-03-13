@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+	<title>Giải phương trình bậc 1</title>
+   <style>
+       .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+  </style>
+</head>
+<body bgcolor="lightgoldenrodyellow">
+ 
+   <center>
+	<h1 style="color:saddlebrown">Giải phương trình bậc 1</h1>
+      </center>
+  <center>
+	<form id="solveForm">
+		<label for="a">Hệ số a:</label><br>
+		<input type="number" placeholder="Nhập hệ số a" id="a" name="a" required><br>
+		<label for="b">Hệ số b:</label><br>
+		<input type="number" placeholder="Nhập hệ số b"  id="b" name="b" required><br><br>
+	
+        <button class="btn" onclick="giaiPhuongTrinh()">Giải phương trình</button>
+        <div class="result" id="result"></div>
+    </form>
+</center>
+	<script>document.getElementById("solveForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var a = parseFloat(document.getElementById("a").value);
+  var b = parseFloat(document.getElementById("b").value);
+
+  if (isNaN(a) || isNaN(b)) {
+    document.getElementById("result").textContent = "Vui lòng nhập các số hợp lệ.";
+    return;
+  }
+
+  if (a === 0) {
+    if (b === 0) {
+      document.getElementById("result").textContent = "Phương trình vô số nghiệm.";
+    } else {
+      document.getElementById("result").textContent = "Phương trình vô nghiệm.";
+    }
+    return;
+  }
+
+  var x = -b / a;
+  document.getElementById("result").textContent = "Nghiệm của phương trình là x = " + x.toFixed(2) + ".";
+});</script>
+</body>
+</html>
